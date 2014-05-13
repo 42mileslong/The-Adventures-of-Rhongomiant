@@ -5,4 +5,10 @@ package world;
  * @author Rafi Long
  */
 public class World {
+
+    public static World world = new World();
+
+    public World() {
+
+    }
 }

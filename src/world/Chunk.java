@@ -1,14 +1,27 @@
 package world;
 
+import java.awt.*;
+
 /**
  * See README.md for documentation
  * @author Rafi Long
  */
 public class Chunk {
+    /**
+     * An array of types of blocks
+     * Calculations run on this
+     */
     public Type[][] chunk = new Type[120][80];
 
+    /**
+     * Enum for the types of blocks
+     */
     enum Type {AIR, DIRT, WOOD, STONE, GLASS}
 
+    /**
+     * Constructor for Chunk, sets the ground
+     * @param ground the ground level
+     */
     public Chunk(int ground) {
         //sets the ground level
         for (int y = 0; y >= 32; y++) {
@@ -22,9 +35,15 @@ public class Chunk {
         }
     }
 
-    public void setBlock(int x1, int y1, int x2, int y2, Type type) {
-        for (int x = x1; x < x2; x++) {
-            for (int y = y1; y < y2; y++) {
+    /**
+     * Sets the blocks in a given area
+     * @param one the first point
+     * @param two the second point
+     * @param type the type of block for the area to be filled in
+     */
+    public void setBlock(Point one, Point two, Type type) {
+        for (int x = (int) one.getX(); x < two.getX(); x++) {
+            for (int y = (int) one.getY(); y < two.getY(); y++) {
                 chunk[x][y] = type;
             }
         }
