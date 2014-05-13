@@ -14,18 +14,15 @@ public class Main {
     }
 
     public static void initDisplay() {
-        //makes a Display object
-        Display d = new Display();
-
         //makes the frame
-        JFrame f = new JFrame();
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setSize(0, 0);
-        f.setLocation(0, 0);
-        f.setVisible(true);
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(Display.display.screenWidth, Display.display.screenHeight);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
 
-        //adds d to the frame
-        f.add(d);
+        //adds display to the frame
+        frame.add(Display.display);
     }
 
     public static void consolePrint(String message) {
