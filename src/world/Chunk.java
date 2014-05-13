@@ -11,7 +11,7 @@ public class Chunk {
      * An array of types of blocks
      * Calculations run on this
      */
-    public Type[][] chunk = new Type[120][80];
+    public Type[][] chunk = new Type[60][40];
 
     /**
      * Enum for the types of blocks
