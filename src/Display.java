@@ -2,7 +2,7 @@ import javax.swing.*;
 
 /**
  * See README.md for documentation
- * @author 42mileslong
+ * @author Rafi Long
  */
 public class Display extends JComponent {
     public static Display display = new Display();

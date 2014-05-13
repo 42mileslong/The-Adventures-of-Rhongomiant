@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * See README.md for documentation
- * @author 42mileslong
+ * @author Rafi Long
  */
 public class Main {
 

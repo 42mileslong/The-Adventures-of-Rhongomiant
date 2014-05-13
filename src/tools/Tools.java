@@ -2,7 +2,7 @@ package tools;
 
 /**
  * See README.md for documentation
- * @author 42mileslong
+ * @author Rafi Long
  */
 public class Tools {
 }
