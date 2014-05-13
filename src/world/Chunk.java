@@ -5,7 +5,7 @@ package world;
  * @author Rafi Long
  */
 public class Chunk {
-    public Type[][] chunk = new Type[32][32];
+    public Type[][] chunk = new Type[120][80];
 
     enum Type {AIR, DIRT, WOOD, STONE, GLASS}
 
