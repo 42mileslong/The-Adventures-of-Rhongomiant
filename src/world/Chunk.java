@@ -11,12 +11,7 @@ public class Chunk {
      * An array of types of blocks
      * Calculations run on this
      */
-    public Type[][] chunk = new Type[60][40];
-
-    /**
-     * Enum for the types of blocks
-     */
-    enum Type {AIR, DIRT, WOOD, STONE, GLASS}
+    public Square[][] chunk = new Square[60][40];
 
     /**
      * Constructor for Chunk, sets the ground
@@ -24,12 +19,12 @@ public class Chunk {
      */
     public Chunk(int ground) {
         //sets the ground level
-        for (int y = 0; y >= 32; y++) {
-            for (int x = 0; x < 32; x++) {
+        for (int y = 0; y >= 60; y++) {
+            for (int x = 0; x < 40; x++) {
                 if (y < ground) {
-                    chunk[x][y] = Type.DIRT;
+                    chunk[x][y] = new Square(Type.DIRT);
                 } else {
-                    chunk[x][y] = Type.AIR;
+                    chunk[x][y] = new Square(Type.AIR);
                 }
             }
         }
@@ -44,7 +39,7 @@ public class Chunk {
     public void setBlock(Point one, Point two, Type type) {
         for (int x = (int) one.getX(); x < two.getX(); x++) {
             for (int y = (int) one.getY(); y < two.getY(); y++) {
-                chunk[x][y] = type;
+                chunk[x][y].type = type;
             }
         }
     }
