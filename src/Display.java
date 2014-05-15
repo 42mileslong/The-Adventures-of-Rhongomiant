@@ -72,7 +72,7 @@ public class Display extends JComponent {
                         Square square = chunk.chunk[x][y];
                         Color color = square.colors[r][c];
                         g.setColor(color);
-                        g.fillRect(32 * x + 4 * r, 32 * y + 4 * c, 4, 4);
+                        g.fillRect(32 * x + 4 * r, gameHeight - (32 * y + 4 * c), 4, 4);
                     }
                 }
             }
