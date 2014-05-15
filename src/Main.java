@@ -1,3 +1,5 @@
+import world.World;
+
 import javax.swing.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,6 +9,10 @@ import java.util.Date;
  * @author Rafi Long
  */
 public class Main {
+    /**
+     * The world
+     */
+    public static World world = new World();
 
     /**
      * Initializes everything
@@ -14,6 +20,7 @@ public class Main {
     public static void main(String args[]) {
         consolePrint("Making frame");
         initDisplay();
+        Display.display.repaint();
     }
 
     /**

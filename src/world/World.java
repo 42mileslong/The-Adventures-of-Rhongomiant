@@ -19,6 +19,16 @@ public class World {
      * World constructor
      */
     public World() {
-
+        setChunk();
     }
+
+    /**
+     * Sets the chunks of the world
+     */
+    private void setChunk() {
+        for (int x = 0; x < chunks.length; x++) {
+            chunks[x] = new Chunk(5);
+        }
+    }
+
 }
