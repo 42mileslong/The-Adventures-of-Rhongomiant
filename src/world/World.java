@@ -22,7 +22,7 @@ public class World {
      */
     private void setChunk() {
         for (int x = 0; x < chunks.length; x++) {
-            chunks[x] = new Chunk(5);
+            chunks[x] = new Chunk(3);
         }
     }
 }

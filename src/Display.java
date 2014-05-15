@@ -64,15 +64,15 @@ public class Display extends JComponent {
      * @param g Graphics argument
      */
     public void drawBackground(Graphics g) {
-        for (int x = 0; x < 60; x++) {
-            for (int y = 0; y < 40; y++) {
+        for (int x = 0; x < 30; x++) {
+            for (int y = 0; y < 20; y++) {
                 for (int r = 0; r < 8; r++) {
                     for (int c = 0; c < 8; c++) {
                         Chunk chunk = Main.world.chunks[0];
                         Square square = chunk.chunk[x][y];
                         Color color = square.colors[r][c];
                         g.setColor(color);
-                        g.fillRect(2 * x, 2 * (y + 1), 2, 2);
+                        g.fillRect(32 * x + 4 * r, 32 * y + 4 * c, 4, 4);
                     }
                 }
             }
