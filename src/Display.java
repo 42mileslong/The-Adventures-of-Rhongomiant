@@ -1,3 +1,6 @@
+import world.Chunk;
+import world.Square;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -65,7 +68,10 @@ public class Display extends JComponent {
             for (int y = 0; y < 40; y++) {
                 for (int r = 0; r < 8; r++) {
                     for (int c = 0; c < 8; c++) {
-                        g.setColor(Main.world.chunks[0].chunk[x][y].colors[r][c]);
+                        Chunk chunk = Main.world.chunks[0];
+                        Square square = chunk.chunk[x][y];
+                        Color color = square.colors[r][c];
+                        g.setColor(color);
                         g.fillRect(2 * x, 2 * (y + 1), 2, 2);
                     }
                 }

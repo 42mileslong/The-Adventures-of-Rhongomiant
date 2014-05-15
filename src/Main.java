@@ -12,12 +12,13 @@ public class Main {
     /**
      * The world
      */
-    public static World world = new World();
+    public static World world;
 
     /**
      * Initializes everything
      */
     public static void main(String args[]) {
+        world = new World();
         consolePrint("Making frame");
         initDisplay();
         Display.display.repaint();

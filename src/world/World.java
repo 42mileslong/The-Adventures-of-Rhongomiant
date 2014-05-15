@@ -6,11 +6,6 @@ package world;
  */
 public class World {
     /**
-     * The world
-     */
-    public static World world = new World();
-
-    /**
      * The world loaded in chunks
      */
     public Chunk[] chunks = new Chunk[10];
@@ -30,5 +25,4 @@ public class World {
             chunks[x] = new Chunk(5);
         }
     }
-
 }

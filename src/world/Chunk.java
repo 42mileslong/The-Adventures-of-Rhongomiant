@@ -19,8 +19,8 @@ public class Chunk {
      */
     public Chunk(int ground) {
         //sets the ground level
-        for (int y = 0; y >= 60; y++) {
-            for (int x = 0; x < 40; x++) {
+        for (int x = 0; x < 60; x++) {
+            for (int y = 0; y < 40; y++) {
                 if (y < ground) {
                     chunk[x][y] = new Square(Type.DIRT);
                 } else {
